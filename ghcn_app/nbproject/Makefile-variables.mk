@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Cygwin-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
+CND_PLATFORM_Debug=GNU-Linux-x86
+CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
 CND_ARTIFACT_NAME_Debug=ghcn_app
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/ghcn_app
-CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/ghcn_app
+CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Debug=ghcnapp.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/ghcnapp.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/ghcnapp.tar
 # Release configuration
-CND_PLATFORM_Release=Cygwin-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
+CND_PLATFORM_Release=GNU-Linux-x86
+CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
 CND_ARTIFACT_NAME_Release=ghcn_app
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/ghcn_app
-CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/ghcn_app
+CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Release=ghcnapp.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/ghcnapp.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/ghcnapp.tar
 #
 # include compiler specific variables
 #
