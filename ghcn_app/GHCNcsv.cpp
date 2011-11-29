@@ -123,7 +123,7 @@ void GHCN::MergeMonthsToYear(MERGE_MODE mode)
 	// Compute an average of all months for this year.
 	for(imm=0; imm<12; imm++)
 	{
-	  if(iyy->second[imm]>GHCN_NOTEMP+ERR_EPS)
+	  if(iyy->second[imm]>GHCN_NOTEMP()+ERR_EPS())
 	  {
 	    year_avg += iyy->second[imm];
 	    mm_avg_count+=1;
@@ -148,7 +148,7 @@ void GHCN::MergeMonthsToYear(MERGE_MODE mode)
 	}
 	// Add the value to the anomaly map only if it's
 	// a valid temperature value.
-	if(year_max > GHCN_NOTEMP+ERR_EPS)
+	if(year_max > GHCN_NOTEMP()+ERR_EPS())
 	{
 	  mGlobalAverageAnnualAnomalies[iyy->first] = year_max;
 	}
@@ -160,14 +160,14 @@ void GHCN::MergeMonthsToYear(MERGE_MODE mode)
 	year_min=iyy->second[0];
 	for(imm=1; imm<12; imm++)
 	{
-	  if(iyy->second[imm]>GHCN_NOTEMP+ERR_EPS)
+	  if(iyy->second[imm]>GHCN_NOTEMP()+ERR_EPS())
 	  {
 	    year_min=MIN(year_min,iyy->second[imm]);
 	  }
 	}
 	// Add the value to the anomaly map only if it's
 	// a valid temperature value.
-	if(year_min > GHCN_NOTEMP+ERR_EPS)
+	if(year_min > GHCN_NOTEMP()+ERR_EPS())
 	{
 	  mGlobalAverageAnnualAnomalies[iyy->first] = year_min;
 	}
@@ -205,7 +205,7 @@ void GHCN::ComputeGlobalAverageAnomalies(const int& minBaselineSampleCount)
       for(imm=0; imm<12; imm++)
       {
 	// Do we have a valid temperature sample?
-	if(iyy->second[imm]>GHCN_NOTEMP+ERR_EPS)
+	if(iyy->second[imm]>GHCN_NOTEMP()+ERR_EPS())
 	{
 	  // Do we have enough baseline temperature samples to include
 	  // this station/month in the anomaly average?
@@ -252,7 +252,7 @@ void GHCN::ComputeGlobalAverageAnomalies(const int& minBaselineSampleCount)
 	// No station data found for this year/month?
 	// Then set to GHCN_NOTEMP so that this entry won't
 	// used to compute the annual anomaly temperatures.
-	avg_iyy->second[imm]=GHCN_NOTEMP;
+	avg_iyy->second[imm]=GHCN_NOTEMP();
       }
     }
     
@@ -373,7 +373,7 @@ void GHCN::ComputeBaselines(void)
 	  // Check for sample validity.  Invalid/missing samples
 	  // have been set equal to GHCN_NOTEMP. Skip over -9999
 	  // missing temperature values.
-	  if(iss->second[yykey][imm] > GHCN_NOTEMP+ERR_EPS)
+	  if(iss->second[yykey][imm] > GHCN_NOTEMP()+ERR_EPS())
 	  {
 	    bool first_count=false;
 
@@ -468,7 +468,7 @@ void GHCN::ReadTemps(void)
       int ii;
       for(ii=0; ii<12; ii++)
       {
-	tt[ii]=GHCN_NOTEMP;
+	tt[ii]=GHCN_NOTEMP();
       }
 
       if(mIyear >= MIN_GISS_YEAR)
@@ -481,7 +481,7 @@ void GHCN::ReadTemps(void)
 	
 	for(ii=0; ii<12; ii++)
 	{
-	  if(tt[ii]>GHCN_NOTEMP+ERR_EPS)
+	  if(tt[ii]>GHCN_NOTEMP()+ERR_EPS())
 	  {
 	    // Got a valid value? Divide the GHCN temperature*10
 	    // number down to get the proper temperature value.
@@ -491,7 +491,7 @@ void GHCN::ReadTemps(void)
 	  {
 	    // Make sure missing temperature values are marked
 	    // by -9999 entries in the station/year/month temperature map.
-	    mTempsMap[mIstation][mIyear][ii]=GHCN_NOTEMP;
+	    mTempsMap[mIstation][mIyear][ii]=GHCN_NOTEMP();
 	  }
 	}
       }
@@ -609,7 +609,7 @@ int main(int argc, char **argv)
   // GHCN* ghcn[MAXFILES];
   int igh;
   
-  int ProcessOptions(int argc, char **argv);
+//  int ProcessOptions(int argc, char **argv);
   
   void DumpSmoothedResults(GHCN **ghcn, int nghcn);
 

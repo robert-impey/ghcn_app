@@ -3,7 +3,8 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include <unistd.h>
+//#include <unistd.h>
+#include "getopt.h"
 #include <stdlib.h>
 
 /*
@@ -143,11 +144,11 @@ class GHCN
 
   // All missing temperature fields in the GHCN files are designated
   // by -9999
-  static const float GHCN_NOTEMP = (-9999.0);
+	 static float GHCN_NOTEMP() { return -9999.0f; }
 
   // When comparing floating pt. vals against GHCN_NOTEMP,
   // make sure that we don't get bitten by floating-pt precision limitations.
-  static const float ERR_EPS = (0.1);
+	 static float ERR_EPS() { return 0.1f; }
   
   // Starting year to process -- NASA/GISS doesn't try
   // to compute temperature anomalies prior to this year
