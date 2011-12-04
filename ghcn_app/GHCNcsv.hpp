@@ -3,8 +3,13 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-//#include <unistd.h>
+
+#if defined(_WIN32)
 #include "getopt.h"
+#else
+#include <unistd.h>
+#endif
+
 #include <stdlib.h>
 
 /*
