@@ -1,3 +1,9 @@
 /ghcn_app/nbproject/private/
 /ghcn_app/dist/Debug/
 /ghcn_app/build/Debug/
+ghcn_app/Debug/
+ghcn_app/GHCN App.sdf
+ghcn_app/GHCN App.suo
+ghcn_app/GHCN App.vcxproj.user
+ghcn_app/ipch/
+
