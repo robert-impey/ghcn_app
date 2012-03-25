@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GHCN App", "GHCN App.vcxproj", "{4989BFF9-FD73-B9C9-D015-987816B00FD0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GHCN App", "GHCN App.vcxproj", "{BCA0AAD7-8F9F-D1D4-F498-5536B5602927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4989BFF9-FD73-B9C9-D015-987816B00FD0}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4989BFF9-FD73-B9C9-D015-987816B00FD0}.Debug|Win32.Build.0 = Debug|Win32
-		{4989BFF9-FD73-B9C9-D015-987816B00FD0}.Release|Win32.ActiveCfg = Release|Win32
-		{4989BFF9-FD73-B9C9-D015-987816B00FD0}.Release|Win32.Build.0 = Release|Win32
+		{BCA0AAD7-8F9F-D1D4-F498-5536B5602927}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCA0AAD7-8F9F-D1D4-F498-5536B5602927}.Debug|Win32.Build.0 = Debug|Win32
+		{BCA0AAD7-8F9F-D1D4-F498-5536B5602927}.Release|Win32.ActiveCfg = Release|Win32
+		{BCA0AAD7-8F9F-D1D4-F498-5536B5602927}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
