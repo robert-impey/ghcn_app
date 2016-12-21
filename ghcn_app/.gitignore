@@ -1,0 +1,10 @@
+dist
+build
+ipch
+Debug
+Release
+GHCN App.sdf
+GHCN App.opensdf
+GHCN App.suo
+GHCN App.v11.suo
+GHCN App.vcxproj.user
